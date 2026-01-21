@@ -10,11 +10,12 @@ export default function Hero() {
         {/* Image Section */}
         <div className="relative bg-[#D1D1D1] min-h-[400px] lg:min-h-screen">
           <Image
-            src="/placeholder.svg?height=1080&width=1080"
+            src="/images/hero/hero.webp"
             alt="Artigianato del legno Riva Design"
             fill
             className="object-cover"
             priority
+            sizes="(max-width: 1024px) 100vw, 50vw"
           />
         </div>
 

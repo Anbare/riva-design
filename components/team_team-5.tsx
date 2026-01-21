@@ -16,7 +16,7 @@ const teamMembers: TeamMember[] = [
         name: 'Giuseppe Riva',
         role: 'Fondatore e maestro',
         description: 'Ha iniziato con un\'ascia e una visione. Oggi guida ogni progetto con la stessa passione del primo giorno.',
-        avatar: '/placeholder.svg?height=120&width=120',
+        avatar: '/images/avatars/giuseppe_riva.webp',
         linkedin: '#',
         twitter: '#',
         dribbble: '#',
@@ -25,7 +25,7 @@ const teamMembers: TeamMember[] = [
         name: 'Marco Rossi',
         role: 'Direttore creativo',
         description: 'Trasforma i sogni degli architetti in realtà. Conosce il legno come un musicista conosce il suo strumento.',
-        avatar: '/placeholder.svg?height=120&width=120',
+        avatar: '/images/avatars/marco_rossi.jpg',
         linkedin: '#',
         twitter: '#',
         dribbble: '#',
@@ -34,7 +34,7 @@ const teamMembers: TeamMember[] = [
         name: 'Francesca Moretti',
         role: 'Capo artigiana',
         description: 'Ventitré anni nel laboratorio. Le sue mani sanno quello che la mente non può ancora immaginare.',
-        avatar: '/placeholder.svg?height=120&width=120',
+        avatar: '/images/avatars/francesca_moretti.jpg',
         linkedin: '#',
         twitter: '#',
         dribbble: '#',
@@ -43,7 +43,7 @@ const teamMembers: TeamMember[] = [
         name: 'Andrea Bianchi',
         role: 'Ingegnere di precisione',
         description: 'Unisce la tecnologia moderna alla saggezza artigianale. Ogni millimetro conta nel suo mondo.',
-        avatar: '/placeholder.svg?height=120&width=120',
+        avatar: '/images/avatars/andrea_bianchi.jpg',
         linkedin: '#',
         twitter: '#',
         dribbble: '#',
@@ -52,7 +52,7 @@ const teamMembers: TeamMember[] = [
         name: 'Giulia Ferrari',
         role: 'Project manager',
         description: 'Coordina il caos con eleganza. Niente sfugge al suo sguardo attento e alla sua decisione.',
-        avatar: '/placeholder.svg?height=120&width=120',
+        avatar: '/images/avatars/giulia_ferrari.jpg',
         linkedin: '#',
         twitter: '#',
         dribbble: '#',
@@ -61,7 +61,7 @@ const teamMembers: TeamMember[] = [
         name: 'Luca Colombo',
         role: 'Maestro falegname',
         description: 'Porta la tradizione nel futuro. Ogni pezzo che esce dalle sue mani è una dichiarazione d\'amore.',
-        avatar: '/placeholder.svg?height=120&width=120',
+        avatar: '/images/avatars/luca_colombo.jpg',
         linkedin: '#',
         twitter: '#',
         dribbble: '#',
@@ -94,7 +94,16 @@ export default function Team() {
                                         src={member.avatar || "/placeholder.svg"}
                                         alt={member.name}
                                         fill
-                                        className="object-cover"
+                                        className={`object-cover ${
+                                            member.name === 'Andrea Bianchi' 
+                                                ? 'object-[50%_25%]' 
+                                                : member.name === 'Giulia Ferrari'
+                                                ? 'object-[50%_60%]'
+                                                : member.name === 'Luca Colombo'
+                                                ? 'object-[50%_25%]'
+                                                : 'object-center'
+                                        }`}
+                                        sizes="96px"
                                     />
                                 </div>
                             </div>

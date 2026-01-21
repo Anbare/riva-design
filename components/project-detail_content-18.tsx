@@ -19,7 +19,7 @@ export default function ProjectDetail({
         "L'imponente arredamento nel living crea un'area conversazione che invita al relax e all'incontro. Abbiamo lavorato sulle proporzioni per creare un equilibrio visivo tra gli spazi aperti e le zone più raccolte. Il legno, trattato con finiture naturali, conferisce calore e autenticità all'ambiente.",
         "Il risultato finale è uno spazio abitativo che rispecchia perfettamente la visione del cliente: eleganza senza tempo, funzionalità contemporanea e la qualità artigianale che contraddistingue il made in Italy. Ogni elemento racconta la storia di dedizione e maestria nel legno italiano.",
     ],
-    imageSrc = "/placeholder.svg?height=800&width=600",
+    imageSrc = "/images/projects/visione_cliente.webp",
     imageAlt = "Dettaglio progetto realizzato"
 }: ProjectDetailProps) {
     return (

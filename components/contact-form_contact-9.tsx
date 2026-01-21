@@ -37,7 +37,7 @@ export default function ContactForm() {
                     {/* Image Side */}
                     <div className="order-2 lg:order-1 relative w-full aspect-[4/5] overflow-hidden bg-[#F9F9F7] ring-1 ring-inset ring-[#E8E6E1] lg:justify-self-end lg:max-w-[480px] xl:max-w-[520px] 2xl:max-w-[560px]">
                         <Image
-                            src="/placeholder.svg?height=800&width=800"
+                            src="/images/contact/Contatti_progetto.webp"
                             alt="Atelier Riva Design"
                             fill
                             className="object-cover"

@@ -17,19 +17,19 @@ const timelineEvents: TimelineEvent[] = [
     year: '1994',
     title: 'Gli inizi',
     description: 'Giuseppe Riva apre il primo laboratorio con tre artigiani e una passione infinita',
-    image: '/placeholder.svg?height=400&width=300',
+    image: '/images/timeline/1994.webp',
   },
   {
     year: '2001',
     title: 'Espansione',
     description: 'Primi progetti per architetti di fama internazionale e clienti esigenti',
-    image: '/placeholder.svg?height=400&width=300',
+    image: '/images/timeline/2001.webp',
   },
   {
     year: '2010',
     title: 'Innovazione',
     description: 'Espansione dello spazio di lavoro e introduzione di tecnologie di precisione',
-    image: '/placeholder.svg?height=400&width=300',
+    image: '/images/timeline/2010.webp',
   },
 ]
 

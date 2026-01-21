@@ -22,7 +22,7 @@ const phases: ProcessPhase[] = [
     label: 'Fase uno',
     title: "Ascoltiamo e trasformiamo l'idea",
     description: "Iniziamo con una conversazione profonda. Comprendiamo lo spazio, il vostro stile, le vostre necessità. Poi trasformiamo tutto in un progetto che prende forma.",
-    image: '/placeholder.svg?height=700&width=800',
+    image: '/images/process/01_concept.webp',
   },
   {
     id: 'materiali',
@@ -30,7 +30,7 @@ const phases: ProcessPhase[] = [
     label: 'Fase due',
     title: 'Selezioniamo legni pregiati',
     description: "Ogni progetto merita il legno giusto. Selezioniamo essenze pregiate come noce canaletto, rovere massello e frassino, valutando venature, tonalità e caratteristiche uniche per garantire risultati eccezionali.",
-    image: '/placeholder.svg?height=700&width=800',
+    image: '/images/process/02_materiali.webp',
   },
   {
     id: 'realizzazione',
@@ -38,7 +38,7 @@ const phases: ProcessPhase[] = [
     label: 'Fase tre',
     title: 'Realizziamo con maestria artigianale',
     description: "Nel nostro atelier ogni pezzo prende vita attraverso tecniche tradizionali e moderne. Le mani esperte dei nostri artigiani modellano il legno con precisione millimetrica, creando mobili destinati a durare generazioni.",
-    image: '/placeholder.svg?height=700&width=800',
+    image: '/images/process/03_realizzazione.webp',
   },
 ]
 

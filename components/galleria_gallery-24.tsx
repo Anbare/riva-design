@@ -4,6 +4,11 @@ import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
+// Helper per verificare se l'immagine esiste
+const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+  console.error('Errore caricamento immagine:', e.currentTarget.src)
+}
+
 type GalleriaProps = {
   title?: string
   subtitle?: string
@@ -20,56 +25,56 @@ interface GalleryImage {
 const galleryImages: GalleryImage[] = [
   {
     id: 1,
-    src: '/placeholder.svg?height=800&width=1200',
+    src: '/images/gallery/01.webp',
     alt: 'Cucina su misura in noce canaletto',
     width: 1200,
     height: 800,
   },
   {
     id: 2,
-    src: '/placeholder.svg?height=600&width=800',
+    src: '/images/gallery/02.webp',
     alt: 'Libreria a parete in rovere',
     width: 800,
     height: 600,
   },
   {
     id: 3,
-    src: '/placeholder.svg?height=700&width=900',
+    src: '/images/gallery/03.webp',
     alt: 'Armadio su misura camera da letto',
     width: 900,
     height: 700,
   },
   {
     id: 4,
-    src: '/placeholder.svg?height=650&width=850',
+    src: '/images/gallery/04.webp',
     alt: 'Tavolo da pranzo in legno massello',
     width: 850,
     height: 650,
   },
   {
     id: 5,
-    src: '/placeholder.svg?height=750&width=950',
+    src: '/images/gallery/05.webp',
     alt: 'Mobile living contemporaneo',
     width: 950,
     height: 750,
   },
   {
     id: 6,
-    src: '/placeholder.svg?height=600&width=800',
+    src: '/images/gallery/06.webp',
     alt: 'Boiserie e parete attrezzata',
     width: 800,
     height: 600,
   },
   {
     id: 7,
-    src: '/placeholder.svg?height=800&width=1100',
+    src: '/images/gallery/07.webp',
     alt: 'Cucina isola centrale legno scuro',
     width: 1100,
     height: 800,
   },
   {
     id: 8,
-    src: '/placeholder.svg?height=700&width=900',
+    src: '/images/gallery/08.webp',
     alt: 'Cabina armadio su misura',
     width: 900,
     height: 700,
@@ -212,7 +217,7 @@ export default function Galleria({
               }}
               className="flex-shrink-0 snap-center w-[85vw] md:w-[70vw] lg:w-[60vw] relative group"
             >
-              <div className="relative aspect-[4/3] bg-[#E8E6E1] overflow-hidden">
+              <div className="relative w-full bg-[#E8E6E1] overflow-hidden" style={{ aspectRatio: '4/3' }}>
                 <Image
                   src={image.src || "/placeholder.svg"}
                   alt={image.alt}
@@ -220,8 +225,10 @@ export default function Galleria({
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                   sizes="(max-width: 768px) 85vw, (max-width: 1024px) 70vw, 60vw"
                   priority={index === 0}
+                  onError={handleImageError}
                 />
-                <div className="absolute inset-0 bg-[#1A2E26] bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-end">
+                <div className="absolute inset-0 bg-[#1A2E26] opacity-0 group-hover:opacity-30 transition-opacity duration-300 pointer-events-none" />
+                <div className="absolute inset-0 flex items-end pointer-events-none">
                   <div className="p-4 md:p-6 text-[#F9F9F7] opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
                     <p className="text-base md:text-lg font-medium">{image.alt}</p>
                   </div>

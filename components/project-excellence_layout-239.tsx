@@ -4,17 +4,17 @@ import Link from 'next/link'
 export default function ProjectExcellence() {
     const features = [
         {
-            image: '/placeholder.svg?height=400&width=600',
+            image: '/images/projects/falegnameria_su_misura.webp',
             title: 'Falegnameria su misura',
             description: 'Ogni pezzo è stato costruito nel nostro atelier secondo le specifiche esatte dello spazio.',
         },
         {
-            image: '/placeholder.svg?height=400&width=600',
+            image: '/images/projects/materiali_pregiati.webp',
             title: 'Materiali pregiati',
             description: 'Legno stagionato naturalmente, selezionato per venatura e colore, trattato con oli biologici.',
         },
         {
-            image: '/placeholder.svg?height=400&width=600',
+            image: '/images/projects/integrazione_architettonica.webp',
             title: 'Integrazione architettonica',
             description: 'Collaborazione diretta con lo studio di architettura per una coesione totale dello spazio.',
         },

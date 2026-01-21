@@ -12,7 +12,7 @@ export default function ProjectHero({
     title = "Residenza Milano",
     description = "Spazi interni dove la tradizione artigianale incontra l'architettura contemporanea",
     tags = ["Legno massello", "Interni su misura", "Residenziale"],
-    imageSrc = "/placeholder.svg?height=600&width=1400",
+    imageSrc = "/images/projects/residenza_milano.webp",
     imageAlt = "Residenza Milano - Progetto realizzato"
 }: Partial<ProjectHeroProps>) {
     return (

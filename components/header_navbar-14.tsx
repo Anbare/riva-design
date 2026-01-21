@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import { useCallback, useEffect, useRef, useState } from "react"
 import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation"
 import { ChevronDown, Menu, X } from "lucide-react"
@@ -26,10 +26,11 @@ export default function Header() {
   const router = useRouter()
   const hidePrimaryCta = pathname === "/contatti"
 
-  const isDesktop = () =>
-    typeof window !== "undefined" && window.matchMedia && window.matchMedia("(min-width: 1024px)").matches
+  const isDesktop = useCallback(() => {
+    return typeof window !== "undefined" && window.matchMedia && window.matchMedia("(min-width: 1024px)").matches
+  }, [])
 
-  const scrollToSectionCentered = (id: string, offsetPx = 0) => {
+  const scrollToSectionCentered = useCallback((id: string, offsetPx = 0) => {
     const tryScroll = (attempt: number) => {
       const el = document.getElementById(id)
       if (el) {
@@ -44,11 +45,11 @@ export default function Header() {
       return false
     }
     tryScroll(0)
-  }
+  }, [])
 
   // For mobile/tablet use scroll-margin-top on the target (scrollIntoView),
   // while keeping desktop behavior identical (centered scroll).
-  const scrollToSectionStartOnMobile = (id: string, desktopOffsetPx = 0) => {
+  const scrollToSectionStartOnMobile = useCallback((id: string, desktopOffsetPx = 0) => {
     const tryScroll = (attempt: number) => {
       const el = document.getElementById(id)
       if (el) {
@@ -67,7 +68,7 @@ export default function Header() {
       return false
     }
     tryScroll(0)
-  }
+  }, [isDesktop])
 
   const handleProcessoClick = (e?: React.MouseEvent) => {
     e?.preventDefault()
@@ -178,7 +179,7 @@ export default function Header() {
     if (pathname === "/atelier" && target === "materiali") {
       window.setTimeout(() => scrollToSectionCentered("materiali", Math.round(window.innerHeight * 0.18)), 0)
     }
-  }, [pathname])
+  }, [pathname, scrollToSectionCentered, scrollToSectionStartOnMobile])
 
   return (
     <header className="w-full bg-[#F9F9F7] border-b border-[#E8E6E1]">

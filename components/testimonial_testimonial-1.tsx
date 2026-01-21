@@ -12,7 +12,7 @@ export default function Testimonial({
   quote = "Riva Design ha trasformato la nostra visione in realtà. Ogni dettaglio parla di maestria e dedizione.",
   author = "Marco Rossini",
   role = "Collezionista, Milano",
-  avatarUrl = "/placeholder.svg?height=80&width=80",
+  avatarUrl = "/images/projects/collezionista.webp",
   logoUrl,
 }: TestimonialProps) {
   return (
@@ -46,7 +46,7 @@ export default function Testimonial({
               src={avatarUrl || "/placeholder.svg"}
               alt={author}
               fill
-              className="object-cover"
+              className="object-cover object-[50%_20%] scale-110"
               sizes="80px"
             />
           </div>

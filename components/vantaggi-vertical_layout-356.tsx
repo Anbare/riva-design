@@ -23,7 +23,7 @@ const features: Feature[] = [
         title: 'Rovere, noce e ciliegio dai migliori fornitori europei',
         description:
             'Ogni cliente è accolto nel cosa. Selezioniamo i legni raccolta casa storia, e lavoro stessi dopo stabilire il profilo di architetto nelle nostre mani.',
-        image: '/placeholder.svg?height=400&width=500',
+        image: '/images/process/vertical/01_legni_pregiati.webp',
     },
     {
         number: '02',
@@ -32,7 +32,7 @@ const features: Feature[] = [
         title: "Dalla verniciatura naturale all'olio fino alle finiture opache personalizzate",
         description:
             "Nero scezione duri giorni oggetti. La finitura è diversa cose il legno diversi vista, dove arredando il completo per trattamento per esempio.",
-        image: '/placeholder.svg?height=400&width=500',
+        image: '/images/process/vertical/02_Finiture_su_misura.webp',
     },
     {
         number: '03',
@@ -41,7 +41,7 @@ const features: Feature[] = [
         title: "Legni certificati e processi che rispettano l'ambiente",
         description:
             "La bellezza senza coscienza non è bellezza. Lavoriamo solo con fornitori che condividono il nostro impegno verso la terra.",
-        image: '/placeholder.svg?height=400&width=500',
+        image: '/images/process/vertical/03_sostenibilita_consapevole.webp',
     },
 ]
 

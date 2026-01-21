@@ -24,7 +24,7 @@ export default function CTASection() {
             {/* Image Section */}
             <div className="relative w-full aspect-[16/9] md:aspect-[21/9] bg-[#E8E6E1]">
                 <Image
-                    src="/placeholder.svg?height=800&width=1600"
+                    src="/images/projects/residenza_milano_2.webp"
                     alt="Dettaglio artigianale Riva Design"
                     fill
                     className="object-cover"

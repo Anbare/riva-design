@@ -10,18 +10,24 @@ type ModalProps = {
   description?: string
   children?: ReactNode
   footer?: ReactNode
+  initialFocus?: 'title' | 'close'
 }
 
-export default function Modal({ open, onClose, title, eyebrow, description, children, footer }: ModalProps) {
+export default function Modal({ open, onClose, title, eyebrow, description, children, footer, initialFocus = 'close' }: ModalProps) {
   const titleId = useId()
   const descriptionId = useId()
   const closeButtonRef = useRef<HTMLButtonElement | null>(null)
+  const titleRef = useRef<HTMLHeadingElement | null>(null)
 
   useEffect(() => {
     if (!open) return
 
-    // Focus the close button for basic accessibility
-    closeButtonRef.current?.focus()
+    // Focus based on initialFocus prop
+    if (initialFocus === 'title') {
+      titleRef.current?.focus()
+    } else {
+      closeButtonRef.current?.focus()
+    }
 
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose()
@@ -37,7 +43,7 @@ export default function Modal({ open, onClose, title, eyebrow, description, chil
       document.removeEventListener('keydown', onKeyDown)
       document.body.style.overflow = prevOverflow
     }
-  }, [open, onClose])
+  }, [open, onClose, initialFocus])
 
   if (!open) return null
 
@@ -66,7 +72,12 @@ export default function Modal({ open, onClose, title, eyebrow, description, chil
                 {eyebrow ? (
                   <p className="text-[#3D4F48] text-xs font-medium uppercase tracking-wide">{eyebrow}</p>
                 ) : null}
-                <h2 id={titleId} className="mt-1 font-serif text-2xl sm:text-3xl font-bold text-[#1A2E26] leading-tight">
+                <h2 
+                  id={titleId} 
+                  ref={titleRef}
+                  tabIndex={initialFocus === 'title' ? -1 : undefined}
+                  className="mt-1 font-serif text-2xl sm:text-3xl font-bold text-[#1A2E26] leading-tight focus:outline-none focus:ring-2 focus:ring-[#C5A059] focus:ring-offset-2 rounded-sm"
+                >
                   {title}
                 </h2>
                 {description ? (
