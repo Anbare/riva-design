@@ -27,6 +27,27 @@ export default function PrivacyPage() {
           ma vengono trasmessi via email temporanea solo per simulare il funzionamento del servizio.
         </p>
 
+        <h3 className="text-xl font-bold mt-6 text-[#1A2E26]">2.1. Servizi di Analisi Performance (Anonimi)</h3>
+        <p>
+          <strong>Servizio:</strong> Vercel Speed Insights
+        </p>
+        <p>
+          <strong>Finalità:</strong> Monitoraggio delle prestazioni del sito web (Web Vitals) per migliorare l&apos;esperienza utente. 
+          I dati vengono raccolti in modo aggregato e anonimo.
+        </p>
+        <p>
+          <strong>Tipologia dati:</strong> Dati tecnici relativi alle prestazioni di caricamento delle pagine (tempo di caricamento, 
+          interattività, stabilità visiva) in formato aggregato. Nessun dato personale identificativo viene raccolto.
+        </p>
+        <p>
+          <strong>Trattamento:</strong> I dati sono trattati da Vercel (fornitore di hosting) in conformità con le normative sulla privacy. 
+          Non vengono utilizzati cookie di marketing né sistemi di tracciamento pubblicitario. 
+          I dati sono utilizzati esclusivamente per finalità di ottimizzazione tecnica del sito.
+        </p>
+        <p>
+          <strong>Note:</strong> Nessun cookie di marketing / nessun tracciamento pubblicitario.
+        </p>
+
         <h2 className="text-2xl font-bold mt-8 text-[#1A2E26]">3. Diritti d&apos;autore</h2>
         <p>
           Il design, il codice e la struttura del sito sono proprietà intellettuale dello sviluppatore. 

@@ -53,9 +53,15 @@ export default function CookieBanner() {
     <div className="fixed bottom-0 left-0 right-0 z-50 w-full bg-stone-900 text-white">
       <div className="mx-auto max-w-7xl px-6 py-5 lg:px-8">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-sm leading-relaxed text-white/90">
-            Usiamo i cookie per migliorare l’esperienza sul sito. Puoi accettare o rifiutare.
-          </p>
+          <div className="text-sm leading-relaxed text-white/90">
+            <p className="mb-2">
+              Usiamo i cookie per migliorare l’esperienza sul sito. Puoi accettare o rifiutare.
+            </p>
+            <p className="text-xs text-white/70">
+              <strong>Analitici (anonimi) / Performance:</strong> Utilizziamo Vercel Speed Insights per misurare le prestazioni del sito (Web Vitals) in modo aggregato e anonimo. Nessun cookie di marketing né tracciamento pubblicitario. 
+              <a href="/privacy-policy" className="underline ml-1">Maggiori informazioni</a>
+            </p>
+          </div>
 
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-end">
             <button
