@@ -1,4 +1,3 @@
-'use client'
 
 import Image from 'next/image'
 import CTAGroup from '@/components/cta/CTAGroup'
@@ -14,7 +13,9 @@ export default function Hero() {
             alt="Artigianato del legno Riva Design"
             fill
             className="object-cover"
+            quality={60}
             priority
+            fetchPriority="high"
             sizes="(max-width: 1024px) 100vw, 50vw"
           />
         </div>

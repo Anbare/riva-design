@@ -1,4 +1,3 @@
-'use client'
 
 import { Smartphone, BookOpen, Video, ChevronRight } from 'lucide-react'
 import Link from 'next/link'

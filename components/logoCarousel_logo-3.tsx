@@ -66,7 +66,7 @@ export default function LogoCarousel() {
                 key={`${logo.name}-${index}`}
                 className="flex-shrink-0 flex items-center justify-center px-8 md:px-10"
               >
-                <div className="text-[#1A2E26] font-semibold text-lg md:text-xl whitespace-nowrap opacity-60 hover:opacity-100 transition-opacity duration-300">
+                <div className="text-[#1A2E26] font-semibold text-lg md:text-xl whitespace-nowrap">
                   {logo.name}
                 </div>
               </div>
